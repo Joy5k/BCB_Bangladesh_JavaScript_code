@@ -1,16 +1,16 @@
 
 const allPlayers= [];
-// function playerList(names) {
-//     for (let i = 1; i <names.length; i++){
-//         const index = i;
-//         const element = names[index];
-//         let setInOl = document.getElementById('Selected-PlayersList');
-//         let li = document.createElement('li');
-//         setInOl.appendChild(li);
+function playerList(names) {
+    for (let i = 1; i <names.length; i++){
+        const index = i;
+        const element = names[index];
+        let setInOl = document.getElementById('Selected-PlayersList');
+        let li = document.createElement('li');
+        setInOl.appendChild(li);
 
-//         // console.log(element);
-//     }
-// }
+        // console.log(element);
+    }
+}
 
 function getPlayerInfo(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
@@ -27,6 +27,6 @@ function getPlayerInfo(element) {
         let li = document.createElement('li');
         li.innerText = playerName;
      ol.appendChild(li);
-    // playerList(allPlayers);
+    playerList(allPlayers);
 }
 
