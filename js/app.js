@@ -1,5 +1,6 @@
 
 const allPlayers = [];
+
 //  common function for input fields
 function getElementByInputField(IdName) {
     const perPlayersPrice = document.getElementById(IdName);
@@ -16,6 +17,7 @@ function getElementByIdName(element) {
     return convertStringTonNum;
 
 }
+
 
 // first calculate button
 document.getElementById('cal-btn').addEventListener('click', function () {
@@ -49,6 +51,7 @@ document.getElementById('cal2-btn').addEventListener('click', function () {
 
 })
 
+
 function getPlayerInfo(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
    
@@ -65,21 +68,15 @@ function getPlayerInfo(element) {
     }
     else {
         alert('You can not select more than 5.')
+        return;
     }
-    
+    // Button disabled code
+    element.style.color = 'DimGray';
+    element.style.backgroundColor = 'DarkGray';
+    element.innerText = 'selected';
+    element.setAttribute('disabled', true);
    
 }
-document.getElementsByClassName('btn-disabled').addEventListener('click', function () {
-    let btn = document.getElementById('disabled');
-    btn.setAttribute("disabled", "");
-    //    document.body.style.background ='red';
-//     const button = document.querySelector("button");
-
-// button.setAttribute("name", "helloButton");
-// button.setAttribute("disabled", "");
-
-
-})
 
 
    
