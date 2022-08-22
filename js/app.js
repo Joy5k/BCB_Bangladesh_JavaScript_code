@@ -1,13 +1,10 @@
 
 const allPlayers = [];
-
+//  common function
 function getElementByInputField(IdName) {
     const perPlayersPrice = document.getElementById(IdName);
     const perPlayersPriceString = perPlayersPrice.value;
     const perPlayersPriceInNum = parseFloat(perPlayersPriceString);
-    if (IdName == "#per- PlayerPrice") {
-        console.log('yes ');
-    }
     return perPlayersPriceInNum;
   
 }
@@ -22,11 +19,20 @@ document.getElementById('cal-btn').addEventListener('click', function () {
     let listLi = list.getElementsByTagName("li");
 const listLength = listLi.length;
 
-
     const perPlayer = document.getElementById('player-expenses');
     let total = perPlayersPriceInNum *listLength;
     perPlayer.innerText = total;
 
+})
+document.getElementById('cal2-btn').addEventListener('click', function () {
+    const totalConsumption = document.getElementById('total');
+    const managerTaka =getElementByInputField('Manager-tk');
+    // console.log(managerTaka);
+    const CoachTaka =getElementByInputField('Coach-tk');
+    // console.log(CoachTaka);
+    const CoachAndManegerTaka = managerTaka + CoachTaka;
+    totalConsumption.innerText = CoachAndManegerTaka;
+  
 
 })
 
@@ -51,10 +57,6 @@ function getPlayerInfo(element) {
         ol.appendChild(li);
     }
    
-    else {
-      
-    }
-  
 }
 
 
