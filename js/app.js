@@ -51,11 +51,11 @@ document.getElementById('cal2-btn').addEventListener('click', function () {
 
 function getPlayerInfo(element) {
     const playerName = element.parentNode.parentNode.children[0].innerText;
+   
     const playerInfo = { playerName: playerName }
 
     allPlayers.push(playerInfo);
     let selectedPlayers = allPlayers.length;
-    const perPlayersPrice = document.getElementById('per-PlayerPrice');
 
     if (selectedPlayers <6 ) {    
         let ol = document.getElementById('Selected-PlayersList');
@@ -63,8 +63,23 @@ function getPlayerInfo(element) {
         li.innerText = playerName;
         ol.appendChild(li);
     }
+    else {
+        alert('You can not select more than 5.')
+    }
+    
    
 }
+document.getElementsByClassName('btn-disabled').addEventListener('click', function () {
+    let btn = document.getElementById('disabled');
+    btn.setAttribute("disabled", "");
+    //    document.body.style.background ='red';
+//     const button = document.querySelector("button");
+
+// button.setAttribute("name", "helloButton");
+// button.setAttribute("disabled", "");
+
+
+})
 
 
    
