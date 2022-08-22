@@ -10,7 +10,7 @@ function getElementByInputField(IdName) {
   
 }
 // common function 2 for innerText
-function getElementByIdName(element) {
+function getTextElementById(element) {
     const setValue= document.getElementById(element);
     const valueInString = setValue.innerText;
     const convertStringTonNum = parseFloat(valueInString);
@@ -39,7 +39,7 @@ document.getElementById('cal-btn').addEventListener('click', function () {
 
 document.getElementById('cal2-btn').addEventListener('click', function () {
     const totalPlayerCosts = document.getElementById('total');
-    const totalPlayerCost=getElementByIdName('player-expenses');
+    const totalPlayerCost=getTextElementById('player-expenses');
     
     const managerTaka =getElementByInputField('Manager-tk');
     const CoachTaka =getElementByInputField('Coach-tk');
